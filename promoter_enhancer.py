@@ -33,50 +33,46 @@ def calculate_distances(file_path, num_beads, num_conformations, target_bead_ind
 
 # Define parameters for the two datasets
 dataset1 = {
-    "file_path": "/mnt/mydisk/Program/multiscale_polymer_model/new_gene_system_NLbeads/lin28A/analysis/cordinates/Reduced_cordinates",
-    "num_beads": 8911,
-    "num_conformations": 13000,
-    "target_bead_index": 4047,
-    "range_start": 1,
-    "range_end": 8910
+    "file_path": "FILE1",
+    "num_beads": N1,
+    "num_conformations": Conf1,
+    "target_bead_index": TSS_posi1,
+    "range_start": Start1,
+    "range_end": END1
 }
 
 dataset2 = {
-    "file_path": "/mnt/mydisk/Program/multiscale_polymer_model/Rahul/check_code_chr12/Reduced_cordinates_chr12",
-    "num_beads": 9577,
-    "num_conformations": 13000,
-    "target_bead_index": 1788,
-    "range_start": 1,
-    "range_end": 9576
+    "file_path": "FILE2",
+    "num_beads": N2,
+    "num_conformations": Conf2,
+    "target_bead_index": TSS_posi2,
+    "range_start": Start2,
+    "range_end": END2
 }
-
 dataset3 = {
-    "file_path": "/mnt/mydisk/Program/multiscale_polymer_model/new_gene_system_NLbeads/hoxa13/analysis/cordinates/Reduced_cordinates",
-    "num_beads": 9350,
-    "num_conformations": 13000,
-    "target_bead_index": 5285,
-    "range_start": 1,
-    "range_end": 9349
+    "file_path": "FILE3",
+    "num_beads": N3,
+    "num_conformations": Conf3,
+    "target_bead_index": TSS_posi3,
+    "range_start": Start3,
+    "range_end": END3
 }
-
 dataset4 = {
-    "file_path": "/mnt/mydisk/Program/multiscale_polymer_model/Rahul/check_code_chr17/Reduced_cordinates_chr17",
-    "num_beads": 8938,
-    "num_conformations": 13000,
-    "target_bead_index": 3232,
-    "range_start": 1,
-    "range_end": 8937
+    "file_path": "FILE4",
+    "num_beads": N4,
+    "num_conformations": Conf4,
+    "target_bead_index": TSS_posi4,
+    "range_start": Start4,
+    "range_end": END4
 }
-
 dataset5 = {
-    "file_path": "/mnt/mydisk/Program/multiscale_polymer_model/new_gene_system_NLbeads/hoxa11/analysis/cordinates/Reduced_cordinates",
-    "num_beads": 9203,
-    "num_conformations": 13000,
-    "target_bead_index": 3434,
-    "range_start": 1,
-    "range_end": 9202
+    "file_path": "FILE5",
+    "num_beads": N5,
+    "num_conformations": Conf5,
+    "target_bead_index": TSS_posi5,
+    "range_start": Start5,
+    "range_end": END5
 }
-
 # Calculate distances for both datasets
 x1, avg1, err1, target_id1 = calculate_distances(**dataset1)
 x2, avg2, err2, target_id2 = calculate_distances(**dataset2)
