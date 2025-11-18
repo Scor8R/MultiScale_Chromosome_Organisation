@@ -14,10 +14,7 @@ from math import isnan
 # User parameters
 # =========================================================
 files = {
-    "Nanog":  ("input_data/nanog_cord_with_rad_130snaps", 9577),
-    "Lin28A": ("input_data/lin28a_cord_with_rad_130snaps", 8911),
-    "HoxB4":  ("input_data/hoxb4_cord_with_rad_130snaps", 8938),
-    "HoxA13": ("input_data/hoxa13_cord_with_rad_130snaps", 9350),
+    "GENENAME":("CORDINATE_FILE",NUMBEROFPARTICLE)
 }
 
 # Bead typing (from your model)
