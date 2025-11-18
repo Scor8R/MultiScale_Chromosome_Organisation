@@ -11,3 +11,5 @@ Before running the code, confirm that all the confirmation counts and the number
 To run the code one can simply command "python3 blob_analysis.py"
 
 Further, to calculate the bending rigidity run "python3 bending_rigidity.py"
+
+To capture the interaction distance with respect to TSS or promoter region one can simply run "python promoter_enhancer.py" 
