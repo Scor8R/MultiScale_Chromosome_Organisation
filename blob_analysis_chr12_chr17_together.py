@@ -138,17 +138,10 @@ eps = 24  # DBSCAN parameter
 min_samples = 2  # DBSCAN parameter
 T1,T2,T3,T4 = 30,5,30,50
 HULLPoints = 4
-#Start = int(sys.argv[1])
-#End = int(sys.argv[2])
-# Load the file containing x, y, z coordinates
-#data = np.loadtxt('trash_data_crd')
-#data = np.loadtxt('/mnt/mydisk/Program/Rahul/check_code_chr12/nucle_crd_175_275')
-data = np.loadtxt('/mnt/mydisk/Program/Rahul/check_code_chr12/Reduced_cordinates_nucleosome_only')
-#data = np.loadtxt('../ReducedNucleOnlylastNsnapsPerSimulation')
 
+data = np.loadtxt('CORDINATE FILE OF NUCLEOSOMES')
 # Load the base-pair positions for the 998 beads
-#index_values = np.loadtxt('/mnt/mydisk/Program/Rahul/check_code_chr12/analysis/t175_275_indexvalue')  # Ensure this file aligns with the beads
-index_values = np.loadtxt('/mnt/mydisk/Program/Rahul/check_code_chr12/analysis/index_values')  # Ensure this file aligns with the beads
+index_values = np.loadtxt('INDEX VALUE OF NUCLEOSOME BEADS')  # Ensure this file aligns with the beads
 assert len(index_values) == num_beads_per_snapshot, "Base-pair positions must match number of beads!"
 
 # Validate input data size
@@ -200,8 +193,6 @@ for snap in range(num_snaps_to_process):
 #for snap in range(Start,End):
     snap_need=snap%130
     simuC=int(snap/130)
-    #for simuC in {57,67}:
-        #continue
     snap_coords = coordinates[snap]
     dbscan = DBSCAN(eps=eps, min_samples=min_samples)
     labels = dbscan.fit_predict(snap_coords)
@@ -309,10 +300,6 @@ for snap in range(num_snaps_to_process):
         #print(len(all_blob_centers)-cntpre)
         #print(snap)
         all_blob_count.append(len(all_blob_centers)-cntpre) 
-#plt.figure(figsize=(10,6))
-#plt.plot(all_blob_count)
-#plt.show()
-#exit()
 # Plot 1: Blob Size Distribution
 all_radii_of_gyration = np.array(all_radii_of_gyration)
 filtered_bins = np.linspace(200,4000, 30)
@@ -548,14 +535,9 @@ errors_rdf12 = np.sqrt(dist_hist12 / len(distances))
 # Parameters (User-Defined)
 num_beads_per_snapshot = 1036  # Number of beads per snapshot
 # Load the file containing x, y, z coordinates
-#data = np.loadtxt('trash_data_crd')
-#data = np.loadtxt('/mnt/mydisk/Program/Rahul/check_code_chr17/nucle_crd_355_455')
-data = np.loadtxt('/mnt/mydisk/Program/Rahul/check_code_chr17/Reduced_cordinates_nucleosome_only')
-#data = np.loadtxt('../ReducedNucleOnlylastNsnapsPerSimulation')
-
-# Load the base-pair positions for the 1036 beads
-#index_values = np.loadtxt('/mnt/mydisk/Program/Rahul/check_code_chr17/analysis/t355_455_indexvalue')  # Ensure this file aligns with the beads
-index_values = np.loadtxt('/mnt/mydisk/Program/Rahul/check_code_chr17/analysis/index_values')  # Ensure this file aligns with the beads
+data = np.loadtxt('CORDINATE FILE OF NUCLEOSOMES')
+# Load the base-pair positions for the 998 beads
+index_values = np.loadtxt('INDEX VALUE OF NUCLEOSOME BEADS')  # Ensure this file aligns with the beads
 assert len(index_values) == num_beads_per_snapshot, "Base-pair positions must match number of beads!"
 
 # Validate input data size
