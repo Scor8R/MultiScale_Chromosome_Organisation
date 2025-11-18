@@ -9,3 +9,5 @@ The first file with respect to any gene contains multiple conformations througho
 Before running the code, confirm that all the confirmation counts and the number of beads mentioned in the code, respective to the target region are correct.
 
 To run the code one can simply command "python3 blob_analysis.py"
+
+Further, to calculate the bending rigidity run "python3 bending_rigidity.py"
